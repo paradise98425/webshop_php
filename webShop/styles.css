@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+}
+
+#nav {
+  display: flex;
+  list-style: none inside;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #3b82f6;
+}
+
+#nav li {
+  display: block;
+  position: relative;
+  float: left;
+  background: #3b82f6;
+  /* menu background color */
+}
+
+#nav li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  text-decoration: none;
+  width: 200px;
+  /* this is the width of the menu items */
+  line-height: 35px;
+  /* this is the hieght of the menu items */
+  color: #ffffff;
+  /* list item font color */
+}
+
+#nav li li a {
+  font-size: 80%;
+}
+
+/* smaller font size for sub menu items */
+
+#nav li:hover {
+  background: #1e40af;
+}
+
+/* highlights current hovered list item and the parent list items when hovering over sub menues */
+
+#nav ul {
+  position: absolute;
+  padding: 0;
+  left: 0;
+  display: none;
+  /* hides sublists */
+}
+
+#nav li:hover ul ul {
+  display: none;
+}
+
+/* hides sub-sublists */
+
+#nav li:hover ul {
+  display: block;
+}
+
+/* shows sublist on hover */
+
+#nav li li:hover ul {
+  display: block;
+  /* shows sub-sublist on hover */
+  margin-left: 200px;
+  /* this should be the same width as the parent list item */
+  margin-top: -35px;
+  /* aligns top of sub menu with top of list item */
+}
+
+#nav .basket a {
+  justify-content: end;
+}
+
+#nav .basket:hover {
+  background-color: #3b82f6;
+}
+
+#nav .basket span {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+}
+
+/* shopping cart*/
+
+.shopping-cart {
+  width: 100%;
+}
+
+.shopping-cart th {
+  border: 1px solid;
+}
+
+.shopping-cart td {
+  border: 1px solid;
+  padding: 5px;
+  text-align: center;
+}
+
+.shopping-cart td:nth-child(3) {
+  width: 15%;
+}
+
+.shopping-cart td:nth-child(3) input {
+  text-align: center;
+}
+
+.shopping-cart td:nth-child(2) {
+  text-align: left;
+}
+
+.shopping-cart-total td:first-child {
+  border: none;
+}
+.shopping-cart-total td:nth-child(2) {
+  border: none;
+}
+.shopping-cart-total td:nth-child(3) {
+  border: none;
+}
+
+.btn-buy {
+  width: 100%;
+  margin-top: 3%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-buy button {
+  padding: 10px 5%;
+  background: cadetblue;
+}
